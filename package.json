@@ -1,0 +1,34 @@
+{
+  "name": "@evilmu/utils",
+  "private": false,
+  "version": "0.0.3",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "eslint": "^8.17.0",
+    "eslint-plugin-react": "^7.30.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+    "main": "out/cjs/index.js",
+  "module": "./lib/index.es.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ]
+}

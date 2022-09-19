@@ -1,14 +1,14 @@
-import { debounce, throttle, buildUUID, buildShortUUID } from './common';
-import { getCookie, getParam } from './web';
-import { shuffle, deduplication } from './array';
+import { DataType, debounce, throttle, randomColor } from './common';
+import { getParam } from './web';
+import { shuffle, deduplication, countElement } from './array';
 
 export {
-  getCookie,
-  getParam,
+  DataType,
   debounce,
   throttle,
-  buildUUID,
-  buildShortUUID,
+  randomColor,
   shuffle,
   deduplication,
+  countElement,
+  getParam,
 };

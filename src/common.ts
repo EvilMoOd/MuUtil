@@ -1,6 +1,15 @@
+// 判断数据类型
+export function DataType(data: any, type?: string) {
+  const dataType = Object.prototype.toString
+    .call(data)
+    .replace(/\[object (\w+)\]/, '$1')
+    .toLowerCase();
+  return type ? dataType === type : dataType;
+}
+
 //防抖
 export const debounce = (fn: Function, delay = 200) => {
-  let timer: any;
+  let timer: number;
   return function () {
     if (timer) {
       clearTimeout(timer);
@@ -10,6 +19,7 @@ export const debounce = (fn: Function, delay = 200) => {
     }
   };
 };
+
 //节流
 export const throttle = (fn: Function, delay = 200) => {
   let valid = true;
@@ -27,32 +37,9 @@ export const throttle = (fn: Function, delay = 200) => {
   };
 };
 
-//UUID
-const hexList: string[] = [];
-for (let i = 0; i <= 15; i++) {
-  hexList[i] = i.toString(16);
-}
-
-export function buildUUID(): string {
-  let uuid = '';
-  for (let i = 1; i <= 36; i++) {
-    if (i === 9 || i === 14 || i === 19 || i === 24) {
-      uuid += '-';
-    } else if (i === 15) {
-      uuid += 4;
-    } else if (i === 20) {
-      uuid += hexList[(Math.random() * 4) | 8];
-    } else {
-      uuid += hexList[(Math.random() * 16) | 0];
-    }
-  }
-  return uuid.replace(/-/g, '');
-}
-
-let unique = 0;
-export function buildShortUUID(prefix = ''): string {
-  const time = Date.now();
-  const random = Math.floor(Math.random() * 1000000000);
-  unique++;
-  return prefix + '_' + random + unique + String(time);
-}
+// 生成随机颜色
+export const randomColor = () =>
+  '#' +
+  Math.floor(Math.random() * 0xffffff)
+    .toString(16)
+    .padEnd(6, '0');

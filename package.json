@@ -1,7 +1,7 @@
 {
   "name": "@evilmu/utils",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc -p tsconfig.build.json",
@@ -25,7 +25,7 @@
   "peerDependencies": {
     "react": ">=17.0.0"
   },
-    "main": "out/cjs/index.js",
+  "main": "out/cjs/index.js",
   "module": "./lib/index.es.js",
   "types": "./lib/index.d.ts",
   "files": [

@@ -20,8 +20,10 @@
 - jschardet(识别文件编码)
 - cropperJs(图片裁剪)
 - image-compare-viewer(图片比较器)
+- browser-image-compression（图片压缩）
 - ls-compressimage(图片格式转换&压缩)
 - @shockpkg/icon-encoder(图片编码成icns)
-- @shockpkg/icon-encoder
-- json-stringify-pretty-compact
+- jimp(图片resize)
+- json-stringify-pretty-compact（json格式化）
 - visual-regex(正则图转换)
+- formula-parser(公式解析)

@@ -1,19 +1,11 @@
 {
   "name": "@evilmu/utils",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && tsc -p tsconfig.build.json",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "build": "vite build && tsc -p tsconfig.build.json"
   },
   "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "@vitejs/plugin-react": "^1.3.0",
@@ -22,13 +14,13 @@
     "typescript": "^4.6.3",
     "vite": "^2.9.9"
   },
-  "peerDependencies": {
-    "react": ">=17.0.0"
-  },
   "main": "out/cjs/index.js",
   "module": "./lib/index.es.js",
   "types": "./lib/index.d.ts",
   "files": [
     "lib"
-  ]
+  ],
+  "dependencies": {
+    "@shockpkg/icon-encoder": "^2.1.3"
+  }
 }
